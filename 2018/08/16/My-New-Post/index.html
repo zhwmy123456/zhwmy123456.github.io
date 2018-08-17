@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="xHexo">
 <meta property="og:description" content="#一、HTML5和CSS3 ###一、HTML的概念、产生和发展&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;HTML:超级文本标记语言是标准通用标记语言下的一个应用，也是一种规范，一种标准，超文本标记语言超文本标记语言，通过标记符号来标记要显示的网页中的各个部分。网页文件本身是一种文本文件，通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-17T12:16:57.241Z">
+<meta property="og:updated_time" content="2018-08-17T12:36:01.280Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="w5总结">
 <meta name="twitter:description" content="#一、HTML5和CSS3 ###一、HTML的概念、产生和发展&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;HTML:超级文本标记语言是标准通用标记语言下的一个应用，也是一种规范，一种标准，超文本标记语言超文本标记语言，通过标记符号来标记要显示的网页中的各个部分。网页文件本身是一种文本文件，通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的">
@@ -109,7 +109,7 @@
 <li>css动画，媒体查询，css伪类(假的class),和伪元素(就没有真实存在)</li>
 <li>其他</li>
 </ol>
-<p>#二、Javascript</p>
+<p>#二、Javascript  </p><h6><a href="http://www.w3school.com.cn/js/index_pro.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/js/index_pro.asp</a><h6><p></p>
 <h4 id="1-Javascript的诞生"><a href="#1-Javascript的诞生" class="headerlink" title="1.Javascript的诞生"></a>1.Javascript的诞生</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在1995年时，由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。因为Netscape与Sun合作，Netscape管理层希望它外观看起来像Java，因此取名为JavaScript。</p>
 <p>####2.Javasript的定义<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。<strong>它的解释器被称为JavaScript引擎，为浏览器的一部分</strong>，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网#页增加动态功能。</p>
 <p>####3.日常用途</p>
@@ -125,25 +125,30 @@
 <ol>
 <li>单线程：主线程处理任务，任务队列，事件回调机制</li>
 <li>动态性：动态类型,动态结构，编译期不怎么检查，运行时出错就抛出异常</li>
-<li>面向对象：除了原始类型其他一切都是对象，连函数都是对象<br>####6.语言的要注意的地方：</li>
+<li>面向对象：除了原始类型其他一切都是对象，连函数都是对象</li>
+<li>类的创建和继承<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">**使用原型和构造函数构建类**</span><br><span class="line"><span class="function">function <span class="title">Car</span><span class="params">(sColor,iDoors,iMpg)</span> </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.color = sColor;</span><br><span class="line"><span class="keyword">this</span>.doors = iDoors;</span><br><span class="line"><span class="keyword">this</span>.mpg = iMpg;</span><br><span class="line"><span class="keyword">this</span>.drivers = <span class="keyword">new</span> Array(<span class="string">"Mike"</span>,<span class="string">"John"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Car.prototype.showColor = function() &#123;</span><br><span class="line">alert(<span class="keyword">this</span>.color);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">**使用原型和构造函数实现原型**</span><br><span class="line"><span class="function">function <span class="title">A</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.x = <span class="number">100</span>;</span><br><span class="line">&#125;</span><br><span class="line">A.prototype.getX = function () &#123;</span><br><span class="line">    console.<span class="built_in">log</span>(<span class="keyword">this</span>.x);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">function <span class="title">B</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.x = <span class="number">200</span>;</span><br><span class="line">&#125;;</span><br><span class="line">B.prototype = <span class="keyword">new</span> A();</span><br><span class="line"></span><br><span class="line">var n = <span class="keyword">new</span> B;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>####6.语言的要注意的地方：</p>
+<ol>
 <li>声明的提前：变量后者函数定义</li>
 <li>闭包：函数可以嵌套定义，返回内部函数引用外部函数的变量，但是外部函数执行完成之后内存无法释放的现象</li>
 <li>函数的作用域链，this的指代问题</li>
-<li>原型链(函数的prototype属性和其他对象的<em>proto</em>属性，写原型会生成原型对象)<br>####7.JS操作HTML和CSS</li>
+<li><a href="https://www.jianshu.com/p/87c0ebb175ea" target="_blank" rel="noopener">原型链</a>(函数的prototype属性和其他对象的<em>proto</em>属性，写原型会生成原型对象)<br>####7.JS操作HTML和CSS</li>
 </ol>
 <ul>
 <li>DOM的概念：页面元素对象</li>
 <li>BOM的概念：浏览器对象</li>
 <li>事件监听：交互响应</li>
-<li>XMLRequest：异步请求<br>####8.EAMC标准<br>  浏览器脚本语言的一个参考标准</li>
+<li>XMLRequest：异步请求<br>####8.ECMA标准<br>  浏览器脚本语言的一个参考标准</li>
 </ul>
 <p>###五、Jquery<br>    对常用的js代码的封装，便于使用</p>
 <p>###六、使用Node.js写爬虫，使用css3和js写3D模型</p>
-
+</h6></h6>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/16/My-New-Post/" data-id="cjkxyqwkb0002mcuoxsyou30f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/16/My-New-Post/" data-id="cjkxzcbk800002ouony3nuaa0" class="article-share-link">Share</a>
       
       
     </footer>
