@@ -1,0 +1,65 @@
+<html>
+    <head>
+
+        <style>
+            .hljs {
+                border: 0;
+                font-size: 16px;
+                display: block;
+                padding: 1px;
+                margin: 0;
+                width: 60%;
+                color: #333;
+            }
+            .hljs ol {
+                list-style: decimal;
+                margin: 0px 0px 0 40px !important;
+                padding: 0px;
+            }
+            .hljs ol li {
+                list-style: decimal-leading-zero;
+                border-left: 3px solid #999 !important;
+                padding: 5px!important;
+                margin: 0 !important;
+            }
+        </style>
+    </head>
+    <body>
+         <input type="button" class="btn" data-clipboard-action="copy" data-clipboard-target="code" value="复制" style="position: relative;top:23px;">  
+         <pre class="hljs">
+            <code>
+                function(){
+                    this.name = "as";
+                    this.brother= "luffy"
+                }
+             </code>
+        </pre>
+    </body>
+        <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>  
+        <!-- 根据关键字进行高亮渲染的css -->
+         <link href="http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css" rel="stylesheet">  
+         <!-- 关键字分析，使用<span class="keyword">来包装 -->
+         <script src="http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+         <!-- 执行关键字分析 -->
+         <script >hljs.initHighlightingOnLoad();</script>  
+         <!-- 剪切插件，选中某部分的内容到剪切板 -->
+         <script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.js"></script>
+         <script>
+                var clipboard = new ClipboardJS('.btn');
+                clipboard.on('success',
+                function(e) {
+                    alert("已复制");
+                });
+                clipboard.on('error',
+                function(e) {
+                    console.log(e);
+                });
+        </script>
+        <script >
+                //显示行号
+                //将code中的每行替换为<li>content</li>
+                $("code").each(function(){
+                    $(this).html("<ol id='a'><li>" + $(this).html().replace(/\n/g,"\n</li><li>") +"\n</li></ol>");
+                });
+        </script>  
+</html>
